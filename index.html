@@ -4,7 +4,32 @@
 <meta charset='utf-8'/>
 <meta name='viewport' content='width=device-width,initial-scale=1'/>
 <title>Presell - Base64 Layout PrivateOficial</title>
-<style>
+<style>/* BOTÃO FIXO NO TOPO */
+.top-btn {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ff004f;
+  color: #fff;
+  text-align: center;
+  padding: 14px 0;
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 9999;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* evita que o conteúdo fique escondido atrás do botão (ajuste para o seu layout) */
+body { padding-top: 64px; }
+
+/* ajusta no mobile para ocupar a área segura (iPhone notch) */
+@media (max-width: 420px) {
+  .top-btn { padding-top: env(safe-area-inset-top); padding-bottom: 14px; font-size: 17px; }
+  body { padding-top: calc(64px + env(safe-area-inset-top)); }
+}
+
   :root{--accent:#ff004f;--bg:#fff;--text:#111;--muted:#666;}
   body{margin:0;padding:24px;background:var(--bg);font-family:Arial;text-align:center;color:var(--text);}
   .wrap{max-width:420px;margin:0 auto;}
