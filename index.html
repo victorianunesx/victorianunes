@@ -34,3 +34,17 @@
 </div>
 </body>
 </html>
+# 1. Clone (ou crie local)
+git clone https://github.com/SEU-USUARIO/NOME-DO-REPO.git
+cd NOME-DO-REPO
+
+# 2. Copie o arquivo para a pasta do repo (ou mova)
+# supondo que index_COMPLETO_FINAL.html está na sua pasta Downloads:
+cp ~/Downloads/index_COMPLETO_FINAL.html ./index.html
+# ou
+mv ~/Downloads/index_COMPLETO_FINAL.html ./index.html
+
+# 3. Commit & push
+git add index.html
+git commit -m "Add index.html - versão final"
+git push origin main
